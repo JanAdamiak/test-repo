@@ -1,0 +1,11 @@
+name: Manually request update of pre-commit hooks
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update_hook_dependencies:
+    steps:
+      - uses: JanAdamiak/precommit-hooks-dependency-updating/action@main
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
